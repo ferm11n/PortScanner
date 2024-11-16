@@ -51,11 +51,11 @@ public class PortScanner {
     private static void escanearPuertos(Scanner scanner) {
         System.out.println("\n\033[0;36m--- Escanear Puertos ---\033[0m");
 
-        // Pedir IP
+
         System.out.print("\033[0;37mIntroduce la IP a escanear: \033[0m");
         String ip = scanner.nextLine();
 
-        // Pedir rango de puertos
+
         System.out.print("\033[0;37mIntroduce el rango de puertos (ejemplo: 20-80): \033[0m");
         String range = scanner.nextLine();
         String[] parts = range.split("-");
@@ -64,13 +64,13 @@ public class PortScanner {
 
         System.out.println("\033[0;32mEscaneando puertos abiertos en " + ip + "...\033[0m");
 
-        // Escanear puertos
+
         for (int port = encenderPuerto; port <= endcerrarPuerto; port++) {
             try (Socket socket = new Socket()) {
                 socket.connect(new InetSocketAddress(ip, port), 200); // Timeout de 200ms
                 System.out.println("\033[0;32mPuerto abierto: " + port + "\033[0m");
             } catch (IOException e) {
-                // Si el puerto está cerrado no hace nada
+                //
             }
         }
 
