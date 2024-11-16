@@ -10,11 +10,24 @@ public class PortScanner {
         Scanner scanner = new Scanner(System.in);
         String userInput;
 
-        // Título y saludo con color
-        System.out.println("\033[0;32m===============================");
-        System.out.println("   Port Scanner v1.0");
-        System.out.println("   Escanea puertos en tu red");
-        System.out.println("===============================\033[0m");
+        // Título en ASCII art
+        System.out.println("\033[0;32m");
+        System.out.println("______                            _____                       ");
+        System.out.println("| ___ \\                  (_)     /  __ \\                      ");
+        System.out.println("| |_/ /__ _ __ ___  _ __  _  __ _| /  \\/ ___  _ __ _ __  ___ ");
+        System.out.println("|  __/ _ \\ '__/ _ \\| '_ \\| |/ _` | |    / _ \\| '__| '_ \\/ __|");
+        System.out.println("| | |  __/ | | (_) | | | | | (_| | \\__/\\ (_) | |  | |_) \\__ \\");
+        System.out.println("\\_|  \\___|_|  \\___/|_| |_|_|\\__,_|\\____/\\___/|_|  | .__/|___/");
+        System.out.println("                                                  | |        ");
+        System.out.println("                                                  |_|        ");
+        System.out.println("\033[0m");
+
+        // Descripción debajo del título
+        System.out.println("\033[0;32m");
+        System.out.println("Autor: Ferm11n.jar");
+        System.out.println("Github: https://github.com/ferm11n");
+        System.out.println("\033[0m");;
+
 
         // Menú de opciones
         while (true) {
@@ -27,7 +40,7 @@ public class PortScanner {
             if (userInput.equals("1")) {
                 escanearPuertos(scanner);
             } else if (userInput.equals("2")) {
-                System.out.println("\033[0;31m¡Hasta luego!\033[0m");
+                System.out.println("\033[0;31mHappy Hunting\033[0m");
                 break;
             } else {
                 System.out.println("\033[0;31mOpción no válida, por favor intenta de nuevo.\033[0m");
